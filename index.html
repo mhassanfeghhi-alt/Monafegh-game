@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>منافق</title>
+<script src="https://developer.eitaa.com/eitaa-web-app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@font-face{font-family:Vazirmatn;font-weight:400 900;src:local('Vazirmatn'),url(Vazirmatn.woff2) format('woff2')}
+*{box-sizing:inherit;font-family:Vazirmatn,Tahoma,sans-serif;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--tx);transition:background .8s,color .8s;--bg:#eaf5e4;--c:#fff;--ac:#2e7d32;--tx:#1b2e1b;--ac2:#fff}
+body[data-t=sea]{--bg:#e3f2fb;--ac:#0277bd;--tx:#10283a}
+body[data-t=desert]{--bg:#fbf0dc;--ac:#d9772b;--tx:#3a2410}
+body.n{--c:#1a2a22;--bg:#0b1a12;--ac:#66bb6a;--tx:#e6f3e8;--ac2:#06150b}
+body.n[data-t=sea]{--bg:#08141f;--c:#12293b;--ac:#4fc3f7;--tx:#e4f3fc}
+body.n[data-t=desert]{--bg:#1c120a;--c:#322216;--ac:#ffb066;--tx:#fbeedd}
+body[data-t=rose]{--bg:#fde8ef;--ac:#c2185b;--tx:#3a1020}
+body[data-t=violet]{--bg:#efe7fb;--ac:#6a1b9a;--tx:#24103a}
+body[data-t=slate]{--bg:#e8edf1;--ac:#455a64;--tx:#15222a}
+body.n[data-t=rose]{--bg:#1f0b14;--c:#331423;--ac:#f48fb1;--tx:#fde4ee}
+body.n[data-t=violet]{--bg:#120a1f;--c:#231638;--ac:#ce93d8;--tx:#f1e4fb}
+body.n[data-t=slate]{--bg:#0d1418;--c:#1c2a31;--ac:#90a4ae;--tx:#e3ecf0}
+#v{max-width:560px;margin:auto;padding:14px;animation:in .5s}
+@keyframes in{from{opacity:0;transform:translateY(12px)}}
+h1{font-size:64px;margin:6px 0;text-align:center;font-weight:900;color:var(--ac)}h2{margin:8px 0}
+.card{background:var(--c);border-radius:20px;padding:16px;margin:10px 0;box-shadow:0 4px 18px #0002}
+button{border:0;border-radius:14px;padding:13px 18px;font-size:17px;font-weight:700;background:var(--ac);color:var(--ac2);cursor:pointer;width:100%;margin:6px 0;transition:transform .15s}
+button:active{transform:scale(.96)}button.g{background:transparent;color:var(--ac);border:2px solid var(--ac)}button:disabled{opacity:.4}
+button.s{width:auto;padding:8px 14px;margin:2px}
+input[type=text]{width:100%;padding:11px;border-radius:12px;border:2px solid #8884;background:transparent;color:var(--tx);font-size:16px;margin:4px 0}
+.top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.chip{padding:12px 6px;border-radius:14px;background:var(--c);border:2px solid #8883;color:var(--tx);font-size:16px;text-align:center;cursor:pointer;margin:0;width:auto}
+.chip.sel{border-color:var(--ac);background:var(--ac);color:var(--ac2)}.chip.d{opacity:.4;text-decoration:line-through}
+.row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:8px 0}
+.hik{font-size:14px;opacity:.85;text-align:center;margin-top:14px;padding:10px;border-radius:12px;border:1px dashed var(--ac)}
+.tm{font-size:64px;font-weight:900;text-align:center;color:var(--ac)}.tm.low{color:#e53935;animation:pl .6s infinite}
+@keyframes pl{50%{transform:scale(1.12)}}
+#m{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;padding:16px;z-index:9}
+#m>div{background:var(--bg);border-radius:22px;padding:18px;width:100%;max-width:420px;max-height:90vh;overflow:auto;animation:in .3s}
+.rc{text-align:center;padding:10px;border-radius:20px;border:3px solid var(--rc)}.rc h2{color:var(--rc);font-size:30px}
+.an{height:140px;display:flex;align-items:center;justify-content:center;position:relative;font-size:84px}
+.an>*{position:absolute}
+.f1,.f2{width:110px;height:110px;line-height:110px;font-size:96px;text-align:center}
+.f1{clip-path:inset(0 50% 0 0);animation:s1 2.4s infinite}.f2{clip-path:inset(0 0 0 50%);animation:s2 2.4s infinite}
+@keyframes s1{50%{transform:translateX(26px) rotate(8deg)}}@keyframes s2{50%{transform:translateX(-26px) rotate(-8deg)}}
+.bob{animation:bob 1.6s infinite}@keyframes bob{50%{transform:translateY(-14px)}}
+.cr{font-size:50px;top:-4px;animation:bob 1.2s infinite}
+.orb{width:120px;height:120px;animation:rot 4s linear infinite;font-size:28px}.orb i{position:absolute;font-style:normal}
+@keyframes rot{to{transform:rotate(360deg)}}
+.pl{font-size:36px;animation:rise 1.6s infinite}@keyframes rise{from{transform:translateY(40px);opacity:0}50%{opacity:1}to{transform:translateY(-40px);opacity:0}}
+.sc{font-size:56px;animation:scan 2.4s infinite}@keyframes scan{0%,100%{transform:translateX(-50px)}50%{transform:translateX(50px) rotate(20deg)}}
+.zm{animation:zm 1.6s infinite}@keyframes zm{0%{transform:scale(1.6);opacity:.3}60%{transform:scale(1)}80%{transform:scale(1.25);filter:drop-shadow(0 0 20px red)}100%{transform:scale(1)}}
+.hit{animation:hit 1.4s infinite}@keyframes hit{0%{transform:translate(-70px,-50px)}35%,100%{transform:translate(0)}}
+.sh{animation:shk 1.4s infinite}@keyframes shk{35%{transform:scale(1.15)}45%{transform:rotate(-8deg)}55%{transform:rotate(8deg)}}
+.moon{animation:bob 3s infinite}
+</style></head><body data-t="forest"><div id="v"></div><div id="m"></div>
+<script>
+const $=q=>document.querySelector(q),F=n=>(+n).toLocaleString('fa');
+const L=(k,d)=>{try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},W=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let C={mf:L('mf',false),th:L('th','forest'),mu:L('mu',true),sx:L('sx',true),vol:L('vol',.5)};
+const sv=()=>{for(const k in C)W(k,C[k]);document.body.dataset.t=C.th;document.title=C.mf?'مافیا':'منافق'};sv();
+/* ---------- صدا ---------- */
+let ac,mg,mood=0,mi;
+function AU(){if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();mg=ac.createGain();mg.connect(ac.destination)}if(ac.state=='suspended')ac.resume();mg.gain.value=C.vol}
+function tone(f,d,ty='sine',v=.15,at=.05){if(!ac)return;const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+at);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(mg);o.start(t);o.stop(t+d)}
+const sfx=a=>{if(!C.sx)return;AU();a.forEach((f,i)=>setTimeout(()=>tone(f,.28,'triangle',.22),i*120))};
+const SN=[[110,131,147,165,196],[262,294,330,392,440]];
+function music(){clearInterval(mi);if(!C.mu)return;AU();const s=SN[mood];const st=()=>{tone(s[Math.floor(Math.random()*5)]*(mood?1:1),2.6,'sine',.11,.7);if(!mood)tone(55,3,'sine',.1,.9);else if(Math.random()<.4)tone(s[Math.floor(Math.random()*5)]*2,1,'triangle',.04)};st();mi=setInterval(st,mood?1000:1700)}
+document.addEventListener('click',()=>{if(!ac)music()},{once:true});
+/* ---------- نقش‌ها ---------- */
+const R={
+mn:{n:'منافق',c:'#c62828',m:1,d:'در ظاهر مومن و در باطن دشمن! شب‌ها با هم‌گروهی‌هایت یک مومن را حذف کن (نه هم‌تیمی‌ات را) و روز با لبخند بین مردم بمان.'},
+sm:{n:'فرمانده نفاق',c:'#880e4f',m:1,d:'رئیس منافقان. بصیر تو را «مومن» می‌بیند! از این پوشش هوشمندانه استفاده کن.'},
+mo:{n:'مومن',c:'#2e7d32',d:'شب خواب هستی و روز با دقت و انصاف گوش می‌دهی. بدون دلیل کسی را متهم نکن؛ نفاق را با استدلال پیدا کن.'},
+tb:{n:'طبیب',c:'#00897b',d:'هر شب یک نفر را از مرگ نجات می‌دهی. فقط یک بار می‌توانی خودت را نجات دهی.'},
+bs:{n:'بصیر',c:'#5e35b1',d:'با نگاه حقیقت‌بین هر شب یک نفر را استعلام می‌کنی. (فرمانده نفاق را مومن می‌بیند!)'},
+gh:{n:'دادخواه',c:'#ef6c00',d:'یک تیر داری برای کل بازی. اگر به منافق بزنی او می‌میرد؛ اگر به مومن بزنی، خودت می‌میری. با دقت!'},
+ep:{n:'استوار',c:'#455a64',d:'زره ایمان داری: اولین حمله منافقان در شب به تو اثر نمی‌کند.'},
+mr:{n:'مربی',c:'#0277bd',d:'یک بار در بازی می‌توانی یک نفر را برای فردا به «سکوت و تفکر» بفرستی؛ او فردا حق صحبت ندارد ولی رأی می‌دهد.'},
+qz:{n:'قاضی',c:'#8d6e63',d:'یک بار در بازی می‌توانی رأی‌گیری فردا را باطل کنی تا از اخراج یک بی‌گناه جلوگیری شود.'},
+jk:{n:'نقش‌باز',c:'#f9a825',d:'بازیکن مستقل! نه با منافقان هستی نه با مومنان. اگر در رأی‌گیری روز اخراج شوی، تنها برنده بازی تو هستی. تیر دادخواه به تو اثر نمی‌کند، بصیر تو را مومن می‌بیند، اما اگر منافقان شب تو را بزنند می‌میری و می‌بازی. پس مشکوک به نظر برس، ولی نه آنقدر که منافقان تو را شب حذف کنند!'}};
+const AN={
+mn:'<div class="f1">😇</div><div class="f2">😈</div>',
+sm:'<div class="f2 bob">😈</div><div class="cr">👑</div>',
+mo:'<div class="bob">🙂</div><div class="orb"><i style="top:0;left:50%">✨</i><i style="bottom:0;left:50%">✨</i><i style="top:50%;left:0">⭐</i></div>',
+tb:'<div>🧑‍⚕️</div><div class="pl" style="left:25%">➕</div><div class="pl" style="right:25%;animation-delay:.7s">💚</div>',
+bs:'<div>👁️</div><div class="sc">🔍</div>',
+gh:'<div class="zm">🎯</div><div style="font-size:40px;left:15%;top:8px" class="bob">🔥</div>',
+ep:'<div class="sh">🛡️</div><div class="hit" style="font-size:44px">⚔️</div>',
+mr:'<div class="bob">🧑‍🏫</div><div class="pl" style="left:22%">🤫</div><div class="pl" style="right:22%;animation-delay:.8s">📖</div>',
+qz:'<div class="sh">⚖️</div><div class="pl" style="right:22%">📜</div>',
+jk:'<div class="sh">🎭</div><div class="pl" style="left:22%">❓</div><div class="pl" style="right:22%;animation-delay:.8s">🎪</div>'};
+const card=k=>`<div class="rc" style="--rc:${R[k].c}"><div class="an">${AN[k]}</div><h2>${R[k].n}</h2><p>${R[k].d}</p></div>`;
+const HK=['زبان، آینه شخصیت است؛ راست بگو تا اعتماد بسازی.','تهمت بی‌دلیل، مومن را از پا درمی‌آورد؛ پیش از قضاوت، دلیل بخواه.','دورویی هر چقدر زیرکانه باشد، سرانجام آشکار می‌شود.','گوش دادن، نیمی از انصاف است؛ اول بشنو، بعد قضاوت کن.','دوست واقعی همان است که پشت سر هم همان باشد که روبرو است.','اتحاد اهل حق، قوی‌تر از نقشه اهل نفاق است.','صبر و تحلیل، بهتر از هیجان و عجله است.'];
+const hik=()=>`<div class="hik">💡 ${HK[Math.floor(Math.random()*HK.length)]}</div>`;
+/* ---------- حالت بازی ---------- */
+let S={names:['','','','',''],sp:60,ch:30,hs:1,rc:null},T={sp:0,ch:null,run:false,iv:null};
+const MP=[['فرمانده نفاق','پدرخوانده'],['منافقان','مافیاها'],['منافق','مافیا'],['مومنان','شهروندان'],['مومن','شهروند'],['نفاق','مافیا'],['طبیب','دکتر'],['بصیر','کارآگاه'],['دادخواه','تک‌تیرانداز'],['استوار','زره‌پوش'],['مربی','روانشناس'],['نقش‌باز','جوکر'],['راوی','گاد']];
+let LH='';const tr=h=>C.mf?MP.reduce((a,p)=>a.split(p[0]).join(p[1]),h):h;
+const V=h=>{LH=h;$('#v').innerHTML=tr(h)},mod=h=>{const m=$('#m');m.innerHTML=tr('<div>'+h+'</div>');m.style.display='flex'},cm=()=>$('#m').style.display='none';
+const bar=(b)=>`<div class="top">${b?'<button class="s g" onclick="home()">→ خانه</button>':'<span></span>'}<button class="s g" onclick="sets()">⚙️ تنظیمات</button></div>`;
+function night(b){document.body.classList.toggle('n',b);mood=b?0:1;music()}
+function home(){clearInterval(T.iv);night(false);V(`${bar()}<h1>منافق</h1><div class="an" style="font-size:90px;height:120px"><div class="f1">😇</div><div class="f2">😈</div></div>
+<p style="text-align:center">بازی گروهی تحلیل، گفتگو و تشخیص نفاق<br>گوشی دست «راوی» است</p>
+<button onclick="setup()">🎮 شروع بازی</button><button class="g" onclick="guide()">📖 راهنما</button><button class="g" onclick="sets()">⚙️ تنظیمات</button>${hik()}`)}
+function guide(){V(`${bar(1)}<h2>📖 راهنمای بازی</h2>
+<div class="card"><b>هدف:</b> مومنان باید همه منافقان را شناسایی و اخراج کنند. منافقان باید تعدادشان به نصف جمع برسد.</div>
+<div class="card"><b>راوی:</b> یک نفر که جمع انتخاب می‌کند و نقش ندارد. گوشی دست اوست، شب‌ها فرمان می‌دهد و نتیجه را اعلام می‌کند.</div>
+<div class="card"><b>نقش‌ها:</b><br>${Object.keys(R).map(k=>`<p><b style="color:${R[k].c}">${R[k].n}:</b> ${R[k].d}</p>`).join('')}</div>
+<div class="card"><b>شب:</b> همه چشم می‌بندند. راوی به ترتیب منافقان، طبیب، بصیر و غیور را بیدار می‌کند و انتخابشان را ثبت می‌کند.<br><b>صبح:</b> راوی خبر شب را اعلام می‌کند.<br><b>روز:</b> هر نفر به نوبت زمان صحبت دارد. هر بازیکن می‌تواند «چالش» بدهد: صحبت اصلی متوقف می‌شود، چالش‌کننده زمان مشخصی پاسخ می‌دهد و سپس صحبت ادامه می‌یابد.<br><b>رأی‌گیری:</b> جمع تصمیم می‌گیرد چه کسی اخراج شود؛ راوی تعداد رأی هر نفر را ثبت می‌کند. بیشترین رأی اخراج می‌شود و در رأی مساوی کسی اخراج نمی‌شود.<br><b>دست‌دادن (قانون اختیاری):</b> وقتی فقط ۳ نفر مانده‌اند (۱ منافق و ۲ مومن)، یکی از مومنان به یکی از دو نفر دیگر دست می‌دهد. دست به مومن یعنی پیروزی مومنان و دست به منافق یعنی پیروزی منافقان. (اگر در جمع شما چنین قانونی نیست، آن را در تنظیم بازی خاموش کنید.)</div>
+<div class="card"><b>🌱 پیام تربیتی:</b> در این بازی راستگویی، انصاف، گوش دادن و پرهیز از تهمت را تمرین می‌کنیم.</div>`)}
+function sets(){mod(`<h2>⚙️ تنظیمات</h2><b>تم رنگی</b><div class="grid" style="grid-template-columns:repeat(3,1fr)">${[['forest','🌲 جنگل'],['sea','🌊 دریا'],['desert','🏜️ کویر'],['rose','🌸 بهار'],['violet','🔮 عرفان'],['slate','🏔️ کوهستان']].map(t=>`<div class="chip ${C.th==t[0]?'sel':''}" onclick="C.th='${t[0]}';sv();sets()">${t[1]}</div>`).join('')}</div>
+<p style="font-size:13px;opacity:.8">هر تم در روز روشن و در شب تیره است.</p>
+<div class="row"><span>🎵 موزیک</span><button class="s" onclick="C.mu=!C.mu;sv();music();sets()">${C.mu?'روشن':'خاموش'}</button></div>
+<div class="row"><span>🔔 جلوه‌های صوتی</span><button class="s" onclick="C.sx=!C.sx;sv();sets()">${C.sx?'روشن':'خاموش'}</button></div>
+<div class="row"><span>🕴️ حالت مافیا (نام‌های مافیایی)</span><button class="s" onclick="C.mf=!C.mf;sv();$('#v').innerHTML=tr(LH);sets()">${C.mf?'روشن':'خاموش'}</button></div>
+<div class="row"><span>🔊 بلندی</span><input type="range" min="0" max="1" step=".1" value="${C.vol}" oninput="C.vol=+this.value;sv();if(mg)mg.gain.value=C.vol"></div>
+<button onclick="cm()">بستن</button>`)}
+/* ---------- آماده‌سازی ---------- */
+const RO=Object.keys(R),sum=c=>Object.values(c).reduce((a,b)=>a+(b||0),0);
+function comp(n){const m=Math.max(1,Math.floor(n/3)),c={mn:m,tb:1,bs:1};if(m>=2){c.sm=1;c.mn=m-1}if(n>=8)c.gh=1;if(n>=9)c.ep=1;if(n>=10)c.mr=1;if(n>=11)c.jk=1;if(n>=12)c.qz=1;c.mo=n-sum(c);return c}
+function setup(){const n=S.names.length,c=S.rc||comp(n),m=RO.filter(k=>R[k].m).reduce((a,k)=>a+(c[k]||0),0),ok=sum(c)==n&&m>=1&&m*2<n;
+V(`${bar(1)}<h2>👥 بازیکنان (بدون راوی)</h2><p style="font-size:13px">راوی را جمع انتخاب می‌کند و در این لیست نیست.</p>
+<div class="card">${S.names.map((x,i)=>`<div class="row"><input type="text" placeholder="بازیکن ${F(i+1)}" value="${x}" oninput="S.names[${i}]=this.value">${n>5?`<button class="s g" onclick="S.names.splice(${i},1);S.rc=null;setup()">✕</button>`:''}</div>`).join('')}
+<button class="g" onclick="S.names.length<20&&S.names.push('');S.rc=null;setup()">+ افزودن بازیکن</button></div>
+<div class="card"><b>⏱ زمان‌ها</b>${[['sp','زمان صحبت هر نفر',15,180],['ch','زمان چالش',10,90]].map(t=>`<div class="row"><span>${t[1]}</span><span><button class="s" onclick="S.${t[0]}=Math.max(${t[2]},S.${t[0]}-5);setup()">−</button> ${F(S[t[0]])} ث <button class="s" onclick="S.${t[0]}=Math.min(${t[3]},S.${t[0]}+5);setup()">+</button></span></div>`).join('')}</div>
+<div class="card"><b>🎭 نقش‌ها (${F(n)} نفر)</b><br>${RO.filter(k=>c[k]).map(k=>`<span style="color:${R[k].c}">${R[k].n}: ${F(c[k])}</span>`).join(' · ')}<br>${ok?'':'<small style="color:#e53935">مجموع نقش‌ها باید برابر تعداد بازیکنان و تعداد منافقان کمتر از نصف باشد.</small>'}
+<div class="row"><button class="g s" onclick="rolesEd()">✏️ ویرایش نقش‌ها</button><button class="g s" onclick="S.rc=null;setup()">⚖️ متعادل‌سازی</button></div></div>
+<div class="card"><div class="row"><span>🤝 قانون دست‌دادن در ۳ نفره</span><button class="s" onclick="S.hs=!S.hs;setup()">${S.hs?'روشن':'خاموش'}</button></div><small>با ۱ منافق و ۲ مومن، یکی از مومنان به یکی از دو نفر دیگر دست می‌دهد؛ دست به مومن = برد مومنان، دست به منافق = برد منافقان.</small></div>
+<button ${ok?'':'disabled'} onclick="deal()">🎲 تقسیم نقش</button>`)}
+function rolesEd(){const n=S.names.length,c=S.rc||comp(n);mod(`<h3>🎭 ویرایش نقش‌ها</h3><p style="font-size:13px">مجموع باید ${F(n)} باشد؛ اکنون ${F(sum(c))}</p>${RO.map(k=>`<div class="row"><span style="color:${R[k].c}">${R[k].n}${R[k].m?' 😈':''}</span><span><button class="s" onclick="rc('${k}',-1)">−</button> ${F(c[k]||0)} <button class="s" onclick="rc('${k}',1)">+</button></span></div>`).join('')}<button class="g" onclick="S.rc=null;rolesEd()">⚖️ متعادل‌سازی خودکار</button><button onclick="cm();setup()">تأیید</button>`)}
+function rc(k,d){S.rc=Object.assign({},S.rc||comp(S.names.length));S.rc[k]=Math.max(0,(S.rc[k]||0)+d);rolesEd()}
+function deal(){const c=S.rc||comp(S.names.length),r=[];RO.forEach(k=>{for(let j=0;j<(c[k]||0);j++)r.push(k)});r.sort(()=>Math.random()-.5);S.p=S.names.map((x,i)=>({n:x.trim()||'بازیکن '+F(i+1),r:r[i],a:true}));S.i=0;S.show=0;S.rd=1;S.tbSelf=0;S.ep=0;S.gh=0;S.mrU=0;S.qzU=0;S.mute=null;S.void=0;S.news='';sfx([392,523]);reveal()}
+function reveal(){const p=S.p[S.i];if(!S.show)return V(`${bar()}<div class="card" style="text-align:center"><h2>${F(S.i+1)} از ${F(S.p.length)}</h2><p>گوشی را به</p><h1 style="font-size:44px">${p.n}</h1><p>بده. بقیه نگاه نکنند!</p><button onclick="S.show=1;sfx([330,440,660]);reveal()">👀 نقش من را نشان بده</button></div>${hik()}`);
+V(`${bar()}${card(p.r)}<button onclick="S.show=0;S.i++;S.i<S.p.length?reveal():begin()">✅ دیدم، پنهان کن</button>`)}
+/* ---------- بازی ---------- */
+function begin(){S.rd=1;S.night=1;nightStart()}
+const alive=()=>S.p.map((p,i)=>i).filter(i=>S.p[i].a),isM=i=>R[S.p[i].r].m;
+function board(){return `<div class="card"><b>👁 نقش بازیکنان (فقط راوی):</b><div class="grid" style="margin-top:8px">${S.p.map((p,i)=>`<div class="chip ${p.a?'':'d'}" onclick="seeR(${i})">${p.a?'':'☠️ '}${p.n}</div>`).join('')}</div></div>`}
+function seeR(i){mod(`<h3>${S.p[i].n} ${S.p[i].a?'':'(خارج‌شده)'}</h3>${card(S.p[i].r)}<button onclick="cm()">بستن</button>`)}
+const STEPS={mn:['منافقان بیدار شوند و یک مومن را برای حذف نشان دهند (نه هم‌تیمی)','mn,sm'],tb:['طبیب بیدار شود و یک نفر را نجات دهد','tb'],bs:['بصیر بیدار شود و یک نفر را استعلام کند','bs'],gh:['دادخواه بیدار شود؛ اگر می‌خواهد شلیک کند','gh'],mr:['مربی بیدار شود؛ اگر می‌خواهد یک نفر را برای فردا به سکوت بفرستد','mr'],qz:['قاضی بیدار شود؛ اگر می‌خواهد رأی‌گیری فردا را باطل کند','qz']};
+const USED=k=>(k=='gh'&&S.gh)||(k=='mr'&&S.mrU)||(k=='qz'&&S.qzU);
+function nightStart(){clearInterval(T.iv);night(true);S.N={};S.st=Object.keys(STEPS).filter(k=>S.p.some(p=>STEPS[k][1].split(',').includes(p.r)));S.k=0;nstep()}
+function nstep(){const k=S.st[S.k],[t,w]=STEPS[k],h=S.p.map((p,i)=>i).filter(i=>w.split(',').includes(S.p[i].r)),live=h.filter(i=>S.p[i].a),sel=S.N[k],us=USED(k),act=live.length&&!us,aw=`<p style="font-size:13px">بیدار: ${live.map(i=>S.p[i].n).join('، ')}</p>`;
+let body;if(!live.length)body='<p>⚠️ این نقش از بازی خارج شده. برای پنهان ماندن، فرمان را بخوان و چند ثانیه صبر کن.</p>';
+else if(us)body='<p>این نقش توانایی یک‌بارمصرفش را استفاده کرده؛ فرمان را فقط بخوان.</p>';
+else if(k=='qz')body=aw+`<div class="grid"><button class="chip ${sel===1?'sel':''}" onclick="S.N.qz=1;nstep()">باطل کند</button><button class="chip ${sel===0?'sel':''}" onclick="S.N.qz=0;nstep()">باطل نکند</button></div>`;
+else{body=aw+`<div class="grid">${alive().map(i=>{const bad=(k=='tb'&&S.tbSelf&&live.includes(i))||(k=='mn'&&isM(i));return `<button class="chip ${sel===i?'sel':''}" ${bad?'disabled':''} onclick="S.N['${k}']=${i};sfx([440]);nstep()">${S.p[i].n}</button>`}).join('')}</div>`;
+if(k=='gh'||k=='mr')body+=`<button class="g" onclick="S.N.${k}=-1;nstep()">${k=='gh'?'شلیک نمی‌کند':'کسی را ساکت نکند'}</button>`;
+if(k=='bs'&&sel!=null)body+=`<div class="card" style="text-align:center">نتیجه: <b>${isM(sel)&&S.p[sel].r!='sm'?'😈 منافق':'🙂 مومن'}</b><br><small>با اشاره سر به بصیر اعلام کن</small></div>`}
+V(`${bar()}<div class="card" style="text-align:center"><div class="an moon" style="height:60px;font-size:48px">🌙</div><small>شب ${F(S.rd)} · مرحله ${F(S.k+1)} از ${F(S.st.length)}</small><h2>${t}</h2>${body}<button ${act&&sel==null?'disabled':''} onclick="${S.k+1<S.st.length?'S.k++;nstep()':'dawn()'}">${S.k+1<S.st.length?'مرحله بعد ←':'🌅 طلوع صبح'}</button></div>${board()}${hik()}`)}
+function kill(i){S.p[i].a=false}
+const has=r=>S.p.some(p=>p.r==r&&p.a);
+function dawn(){const N=S.N,out=[],ex=[];
+if(N.tb!=null&&S.p[N.tb]&&S.p[N.tb].r=='tb'&&has('tb'))S.tbSelf=1;
+if(N.mn!=null&&!isM(N.mn)){const t=N.mn;if(t==N.tb)ex.push('طبیب درست نجات داد! 🩺');else if(S.p[t].r=='ep'&&!S.ep){S.ep=1;ex.push('زره یکی از مومنان، حمله منافقان را دفع کرد! 🛡️')}else out.push(t)}
+if(N.gh!=null&&N.gh>=0&&!S.gh&&has('gh')){S.gh=1;if(S.p[N.gh].r=='jk')ex.push('تیر دادخواه امشب بی‌اثر ماند.');else out.push(isM(N.gh)?N.gh:S.p.findIndex(p=>p.r=='gh'))}
+if(N.mr!=null&&N.mr>=0&&!S.mrU&&has('mr')){S.mrU=1;S.mute=N.mr}
+if(N.qz===1&&!S.qzU&&has('qz')){S.qzU=1;S.void=1}
+const u=[...new Set(out)].filter(i=>S.p[i].a);u.forEach(kill);night(false);sfx([523,659,784]);
+S.news=`<div class="card" style="text-align:center"><div class="an" style="height:60px;font-size:50px">🌅</div><h2>گزارش صبح</h2>${u.length?u.map(i=>`<p>☠️ <b>${S.p[i].n}</b> از بازی خارج شد. نقش او: <b style="color:${R[S.p[i].r].c}">${R[S.p[i].r].n}</b></p>`).join(''):'<p>امشب هیچ‌کس از بازی خارج نشد.</p>'}${ex.map(e=>`<p>${e}</p>`).join('')}${S.mute!=null&&S.p[S.mute].a?`<p>🤫 «${S.p[S.mute].n}» امروز به سکوت و تفکر فرستاده شد.</p>`:''}</div>`;
+if(!win()&&!h3())dayStart()}
+function win(){const a=alive(),m=a.filter(isM).length,o=a.length-m;let w=0;if(!m)w=1;else if(m>=o)w=2;if(!w)return false;fin(w);return true}
+function fin(w){clearInterval(T.iv);night(false);sfx(w==2?[392,330,262,196]:[523,659,784,1047]);
+V(`<div class="card" style="text-align:center"><h1 style="font-size:40px">${w==3?'🎭 نقش‌باز پیروز شد':w==1?'🎉 مومنان پیروز شدند':'😈 منافقان پیروز شدند'}</h1><p>${w==3?'او با ظاهر مشکوک، همه را فریب داد و اخراج شد؛ پیش از اخراج، دلیل بخواهید!':w==1?'با انصاف و دقت، نفاق شناسایی شد.':'نفاق در پوشش دوستی نفوذ کرد؛ دقت و استدلال را تمرین کنید.'}</p></div>
+<div class="card"><b>نقش‌ها:</b>${S.p.map(p=>`<p>${p.a?'':'☠️'} ${p.n}: <b style="color:${R[p.r].c}">${R[p.r].n}</b></p>`).join('')}</div>${S.news||''}<button onclick="setup()">🔁 بازی جدید</button><button class="g" onclick="home()">خانه</button>${hik()}`)}
+function h3(){const a=alive();if(!S.hs||a.length!=3||a.filter(isM).length!=1||a.some(i=>S.p[i].r=='jk'))return false;clearInterval(T.iv);night(false);hs1();return true}
+function hs1(){V(`${bar()}${S.news||''}<div class="card" style="text-align:center"><h2>🤝 دست‌دادن سرنوشت‌ساز</h2><p>سه نفر مانده‌اند. یکی از مومنان بدون مشورت به یکی از دو نفر دیگر دست می‌دهد: دست به مومن = پیروزی مومنان، دست به منافق = پیروزی منافقان.</p><b>کدام مومن دست می‌دهد؟</b><div class="grid">${alive().filter(i=>!isM(i)).map(i=>`<button class="chip" onclick="hs2(${i})">${S.p[i].n}</button>`).join('')}</div></div>`)}
+function hs2(s){V(`${bar()}<div class="card" style="text-align:center"><h2>🤝 ${S.p[s].n} به چه کسی دست می‌دهد؟</h2><div class="grid">${alive().filter(i=>i!=s).map(i=>`<button class="chip" onclick="fin(${isM(i)?2:1})">${S.p[i].n}</button>`).join('')}</div></div>`)}
+/* ---------- روز ---------- */
+const P=x=>String(x).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+function dayStart(){S.q=alive().filter(i=>i!==S.mute);S.mute=null;S.qi=0;V(`${bar()}${S.news}<button onclick="speak()">🗣 شروع نوبت صحبت‌ها</button><button class="g" onclick="voteV()">🗳 رفتن مستقیم به رأی‌گیری</button>${board()}${hik()}`)}
+function speak(){T.sp=S.sp;T.ch=null;T.run=false;clearInterval(T.iv);T.iv=setInterval(tick,1000);dv()}
+function tm(){const v=T.ch!==null?T.ch:T.sp;return String(Math.floor(v/60)).padStart(2,'0')+':'+String(v%60).padStart(2,'0')}
+const pc=()=>Math.max(0,Math.round(100*(T.ch!==null?T.ch/S.ch:T.sp/S.sp)));
+function dv(){const p=S.p[S.q[S.qi]],last=S.qi==S.q.length-1,c=T.ch!==null;
+V(`${bar()}<div class="card" style="text-align:center"><small>نوبت ${F(S.qi+1)} از ${F(S.q.length)}</small><h1 style="font-size:40px">${p.n}</h1>
+<div class="tm" id="tm">${P(tm())}</div><div style="height:12px;border-radius:9px;background:#8884;overflow:hidden"><div id="pb" style="height:100%;width:${pc()}%;background:var(--ac);transition:width 1s linear"></div></div><div style="min-height:30px;margin-top:8px">${c?'⚔️ چالش: <b>'+S.cn+'</b>':'صحبت اصلی'}</div>
+<button onclick="T.run=!T.run;sfx([440]);dv()">${T.run?'⏸ توقف':'▶️ شروع / ادامه'}</button>
+<button class="g" ${c?'disabled':''} onclick="chp()">⚔️ چالش</button>
+<button class="g" onclick="${last?'voteV()':'S.qi++;speak()'}">${last?'🗳 رفتن به رأی‌گیری':'نفر بعد ←'}</button></div>${board()}${hik()}`)}
+function chp(){mod(`<h3>چه کسی چالش می‌دهد؟</h3><div class="grid">${alive().filter(i=>i!=S.q[S.qi]).map(i=>`<button class="chip" onclick="S.cn=S.p[${i}].n;T.ch=S.ch;T.run=true;sfx([660,880]);cm();dv()">${S.p[i].n}</button>`).join('')}</div><button class="g" onclick="cm()">لغو</button>`)}
+function tick(){if(!T.run)return;let end=0;if(T.ch!==null){T.ch--;if(T.ch<=0){T.ch=null;T.run=false;end=1}}else{T.sp--;if(T.sp<=0){T.sp=0;T.run=false;end=1}}
+const e=$('#tm');if(!e)return;const v=T.ch!==null?T.ch:T.sp;e.textContent=P(tm());e.className='tm'+(v<=10?' low':'');const b=$('#pb');if(b)b.style.width=pc()+'%';if(v<=5&&T.run)sfx([880]);if(end){sfx([300,300,300]);dv()}}
+function voteV(){clearInterval(T.iv);if(S.void){S.void=0;S.news='<div class="card" style="text-align:center"><h2>⚖️ حکم قاضی</h2><p>قاضی رأی‌گیری امروز را باطل کرد.</p></div>';return nextN(1)}S.vt={};vv()}
+function vv(){const a=alive(),t=a.reduce((x,i)=>x+(S.vt[i]||0),0);V(`${bar()}<div class="card"><h2>🗳 رأی‌گیری</h2><p>تعداد رأی هر نفر را ثبت کن (مجموع: ${F(t)})</p>${a.map(i=>`<div class="row"><span>${S.p[i].n}</span><span><button class="s" onclick="vt(${i},-1)">−</button> ${F(S.vt[i]||0)} <button class="s" onclick="vt(${i},1)">+</button></span></div>`).join('')}<button onclick="vres()">📣 اعلام نتیجه</button></div>${board()}`)}
+function vt(i,d){S.vt[i]=Math.max(0,(S.vt[i]||0)+d);vv()}
+function vres(){const a=alive(),mx=Math.max(...a.map(i=>S.vt[i]||0)),w=a.filter(i=>(S.vt[i]||0)==mx);if(!mx||w.length>1){S.news=`<div class="card" style="text-align:center"><h2>⚖️ نتیجه رأی‌گیری</h2><p>${mx?'رأی‌ها مساوی شد؛ امروز کسی اخراج نشد.':'رأیی ثبت نشد؛ کسی اخراج نشد.'}</p></div>`;return nextN(1)}conf(w[0])}
+function conf(i){mod(`<h3>اخراج «${S.p[i].n}»؟</h3><button onclick="cm();out(${i})">بله، اخراج شود</button><button class="g" onclick="cm()">خیر</button>`)}
+function out(i){kill(i);sfx([300,220]);S.news=`<div class="card" style="text-align:center"><h2>⚖️ نتیجه رأی‌گیری</h2><p><b>${S.p[i].n}</b> اخراج شد. نقش او: <b style="color:${R[S.p[i].r].c}">${R[S.p[i].r].n}</b></p></div>`;if(S.p[i].r=='jk')return fin(3);if(!win()&&!h3())nextN(1)}
+function nextN(k){if(!k)S.news='';S.rd++;V(`${bar()}${S.news}<button onclick="nightStart()">🌙 شروع شب ${F(S.rd)}</button>${board()}${hik()}`)}
+try{const w=window.Eitaa&&window.Eitaa.WebApp;if(w){w.ready();w.expand()}}catch(e){}
+home();
+</script></body></html>
